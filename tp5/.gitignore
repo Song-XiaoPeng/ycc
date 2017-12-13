@@ -4,3 +4,4 @@ composer.lock
 thinkphp
 ./application/database.php
 ./misc/env/apache_sxp.conf
+../data
