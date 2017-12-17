@@ -25,9 +25,9 @@ CREATE TABLE IF NOT EXISTS works (
 	`type` TINYINT unsigned NOT NULL DEFAULT 0 COMMENT '作品类型 0写作 1摄影 2音频 3视频',
 	`desc` varchar(32) NOT NULL DEFAULT '' COMMENT '作品介绍',
 
+	`collect_id` INT unsigned NOT NULL DEFAULT 0 COMMENT '作品集主键id',
 	`file_id` INT unsigned NOT NULL DEFAULT 0 COMMENT '文件表主键id',
-	`article_id` INT unsigned NOT NULL DEFAULT 0 COMMENT '文件表主键id',
-	`wid` INT unsigned NOT NULL DEFAULT 0 COMMENT '作品集主键id',
+	`article_id` INT unsigned NOT NULL DEFAULT 0 COMMENT '文章表主键id',
 	`uid` INT unsigned NOT NULL DEFAULT 0 COMMENT '创建人 用户表主键id',
 
   `view_num` INT unsigned NOT NULL DEFAULT 0 COMMENT '浏览次数',
@@ -41,13 +41,11 @@ CREATE TABLE IF NOT EXISTS works (
 
 -- 文章表
 CREATE TABLE IF NOT EXISTS article (
-	`id` INT unsigned primary key auto_increment COMMENT '主键id',
+  `id` INT unsigned primary key auto_increment COMMENT '主键id',
 	`name` varchar(32) NOT NULL DEFAULT '' COMMENT '文章标题',
+	`desc` varchar(32) NOT NULL DEFAULT '' COMMENT '作品介绍',
 	`content` text NOT NULL DEFAULT '' COMMENT '文章内容',
-
-  `wid` INT unsigned NOT NULL DEFAULT 0 COMMENT '作品集主键id',
 	`uid` INT unsigned NOT NULL DEFAULT 0 COMMENT '创建人 用户表主键id',
-
   -- 公共
 	`create_time` INT unsigned NOT NULL DEFAULT 0 COMMENT '创建时间',
 	`update_time` INT unsigned NOT NULL DEFAULT 0 COMMENT '修改时间'

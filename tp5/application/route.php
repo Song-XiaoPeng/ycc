@@ -13,9 +13,12 @@ return [
     '__pattern__' => [
         'name' => '\w+',
     ],
-    '[hello]'     => [
-        ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
+    '[hello]' => [
+        ':id' => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
         ':name' => ['index/hello', ['method' => 'post']],
     ],
-
+    '[api]' => [
+        'setCollect' => ['api/Frontend/setCollect'],//编辑作品集
+        'setArticle' => ['api/Frontend/setArticle'],//编辑文章
+    ]
 ];

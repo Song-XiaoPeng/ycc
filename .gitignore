@@ -1,0 +1,7 @@
+./tp5/idea
+./tp5/composer.lock
+./tp5/*.log
+./tp5/thinkphp
+./tp5/application/database.php
+./tp5/misc/env/apache_sxp.conf
+./data
